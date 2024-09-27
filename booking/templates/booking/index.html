@@ -1,0 +1,36 @@
+{% extends "flights/layout.html" %} {% block content %}
+
+<div class="container mt-5">
+  <div class="col-6 mx-auto card p-3 shadow-lg">
+    <h1>Booking page</h1>
+    <br />
+    <div class="alert alert-primary">
+      <strong><h2>{{message}}</h2></strong>
+    </div>
+    <br />
+    <form method="post" action="">
+      {% csrf_token %}
+      <label for="firstname"> First Name: </label> <br />
+      <input
+        type="text"
+        id="firstname"
+        class="form-control"
+        name="first_name"
+      />
+      <br />
+      <label for="lastname"> Last Name: </label> <br />
+      <input type="text" id="lastname" name="last_name" class="form-control" />
+      <br />
+      <label for="Flights">Choose a Flight:</label> <br />
+      <select id="Flights" name="Flight" class="form-control">
+        {% for flight in flights %}
+        <option value="{{flight.id}}">{{flight}}</option>
+        {% endfor %}
+      </select>
+      <br />
+      <label for="Submit"></label> <br />
+      <button type="Submit" id="Submit" class="btn btn-dark">Confirm</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

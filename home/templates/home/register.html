@@ -1,0 +1,29 @@
+{% extends "home/layout.html" %} {% block content %}
+
+<div class="container mt-5">
+  <form class="col-6 mx-auto card p-3 shadow-lg" action="" method="post">
+    {% csrf_token %}
+    <h1>Register</h1>
+    <br />
+    <div class="alert alert-dark">
+      <strong><h3>{{x}}</h3></strong>
+    </div>
+    <br />
+    <label for="username" class="form-label"> Username </label>
+    <input id="username" name="username" type="text" class="form-control" />
+    <label for="first name"> First Name </label>
+    <input id="first name" class="form-control" name="firstname" type="text" />
+    <label for="last name"> Last Name </label>
+    <input id="last name" name="lastname" class="form-control" type="text" />
+    <label for="password"> Password </label>
+    <input id="password" class="form-control" name="password" type="password" />
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br />
+    <br />
+    <h4>Already have an account?</h4>
+    <a href="/login/"> Login Here </a>
+  </form>
+</div>
+
+{% endblock %}

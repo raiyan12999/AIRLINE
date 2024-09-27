@@ -1,0 +1,20 @@
+{% extends "home/layout.html"%} {% block content %}
+
+<div class="container mt-5">
+  <form action="" method="post" class="col-3 mx-auto card p-3 shadow-lg">
+    {% csrf_token %}
+    <div class="alert alert-dark">
+      <strong><h2>{{message}}</h2></strong>
+    </div>
+    <br />
+    <label for="city"> City </label> <br />
+    <input id="city" name="city" type="text" class="form-control" /> <br />
+    <label for="code"> Code </label> <br />
+    <input id="code" name="code" type="text" class="form-control" /> <br />
+    <br />
+
+    <button type="submit" class="btn btn-dark">Add Airport</button>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "home/layout.html" %} {% block content %}
+
+<div class="container mt-5">
+  <form action="" method="post" class="col-6 mx-auto card p-3 shadow-lg">
+    {% csrf_token %}
+    <h1>Log in</h1>
+    <br />
+    <div class="alert alert-dark">
+      <strong><h3>{{x}}</h3></strong>
+    </div>
+    <br />
+    <label for="username"> Username </label>
+    <input id="username" name="username" type="text" class="form-control" />
+    <label for="password"> Password </label>
+    <input id="password" name="password" type="password" class="form-control" />
+    <br />
+
+    <button type="submit" class="btn btn-primary">Log in</button>
+    <br />
+    <br />
+    <h4>Do not have an account?</h4>
+    <a href="/"> Register Here </a>
+    <br />
+  </form>
+</div>
+
+{% endblock %}

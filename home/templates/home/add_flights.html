@@ -1,0 +1,36 @@
+{% extends "home/layout.html" %} {% block content %}
+
+<div class="container mt-5">
+  <div class="col-4 mx-auto card p-3 shadow-lg">
+    <h1>Edit Flights Here</h1>
+    <br />
+    <div class="alert alert-dark">
+      <strong><h2>{{message}}</h2></strong>
+    </div>
+    <br />
+
+    <form method="post" action="">
+      {% csrf_token %}
+      <label for="duration"> Duration </label> <br />
+      <input type="text" id="duration" name="duration" class="form-control" />
+      <br />
+      <label for="origin">Choose an origin:</label> <br />
+      <select id="origin" name="origin" class="form-control">
+        {% for airport in airports %}
+        <option value="{{airport.id}}">{{airport}}</option>
+        {% endfor %}
+      </select>
+      <br />
+      <label for="destination">Choose a destination:</label> <br />
+      <select id="destination" name="destination" class="form-control">
+        {% for airport in airports %}
+        <option value="{{airport.id}}">{{airport}}</option>
+        {% endfor %}
+      </select>
+      <label for="Submit"></label> <br /><br />
+      <button type="Submit" class="btn btn-dark">Add Flight</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

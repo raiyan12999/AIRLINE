@@ -1,0 +1,29 @@
+{% extends "flights/layout.html"%} {% block content %}
+<div class="container mt-5">
+  <div class="col-6 mx-auto card p-3 shadow-lg">
+    <div class="alert alert-primary">
+      <strong>
+        <h2>Flight {{flight.id}}</h2>
+        <ul>
+          <h2>Origin: {{flight.origin}}</h2>
+          <h2>Destination: {{flight.destination}}</h2>
+          <h2>ETA: {{flight.duration}} min</h2>
+        </ul>
+      </strong>
+    </div>
+
+    <div class="alert alert-warning">
+      <strong>
+        <h2>Passengers</h2>
+        <ul>
+          {% for passenger in pass %}
+          <li><h2>{{passenger}}</h2></li>
+          {% empty %}
+          <li><h2>No Passenger</h2></li>
+          {% endfor %}
+        </ul>
+      </strong>
+    </div>
+  </div>
+</div>
+{% endblock %}
