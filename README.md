@@ -1,20 +1,61 @@
-<h1 align ="center> "Flight Booking System </h1>
+# Flight Booking System
 
-<h3 align ="left"> Overview </h3>
-A web-based application to book, view, and manage flights.
-Built using Django, it covers basic airline operations including flight listings, passenger details, and ticket management.
+The Flight Booking System is a web application built using Django that allows users to register, log in, and book flights. It includes an admin panel for managing flights and users and provides an intuitive interface for CRUD operations.
 
-<h3 align ="left"> Key Features </h3>
-<strong> Flight Listings: </strong> View all available flights with detailed information. </br>
-<strong> Passenger Management: </strong> Add, view, and manage passengers on each flight. </br>
-<strong>Booking Functionality:</strong> Simple form-based booking system with confirmation. </br>
-<strong>Real-Time Updates:</strong> Instant reflection of passenger lists.
+---
 
-<h3 align ="left"> Tech Stack </h3>
-<strong>Backend:</strong> Django (Python) </br>
-<strong>Frontend:</strong> HTML, CSS, Bootstrap </br>
-<strong>Database:</strong> SQLite 
+## Features
 
-<h3 align ="left"> Future Enhancements </h3>
-Add payment integration.
-Implement user authentication for secure access.
+- User authentication (registration and login).
+- CRUD operations for flight management.
+- User-friendly interface using Django templates.
+- Database integration using SQLite.
+- Admin panel for managing flights and users.
+
+---
+
+## Technology Used
+
+- **Backend**: Django Framework
+- **Database**: SQLite
+- **Frontend**: Django templates with basic HTML and CSS
+
+---
+
+## Backend
+
+- **Django**: Handles user authentication, routing, and database integration.
+- **SQLite**: Lightweight database for storing user and flight information.
+
+---
+
+## Frontend
+
+- HTML templates designed using Django.
+- Basic CSS for styling.
+- No JavaScript framework used.
+
+---
+
+## Limitations
+
+- No API integration for external communication.
+- Limited frontend interactivity due to lack of JavaScript.
+- Basic database structure, which may not scale for larger datasets.
+
+---
+
+## Future Enhancements
+
+- Implement RESTful APIs for external system integration.
+- Add advanced search and filtering for flights.
+- Add payment integration
+- Enhance the frontend using JavaScript frameworks like React or Vue.js.
+- Upgrade to a scalable database like PostgreSQL for production use.
+
+---
+
+## Author
+
+**Raiyan Bin Atik**  
+[GitHub Profile](https://github.com/raiyan12999)
